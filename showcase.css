@@ -1,0 +1,476 @@
+@import url('https://fonts.cdnfonts.com/css/d-din');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 1440px;
+    height: 710px;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+body {
+    width: 1440px;
+    height: 710px;
+    overflow: hidden;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'D-DIN', sans-serif;
+    color: #fff;
+}
+
+.wrapper {
+    width: 100%;
+    max-height: 700px;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background: url(./img/bkg.png) no-repeat;
+}
+
+.container {
+    display: flex;
+    width: 1440px;
+    max-height: 700px;
+    margin: 0 auto;
+}
+
+.profile_char {
+    width: 55%;
+    height: 600px;
+    display: flex;
+}
+
+.profile_img {
+    border: 1px solid #f0eaca;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+    margin: 20px 10px;
+}
+
+.img-star {
+    width: 200px;
+    z-index: 999;
+    position: absolute;
+}
+
+.img-char {
+    width: 200%;
+}
+
+.wrapper .container .profile_char .profile_img .skills {
+    position: absolute;
+    bottom: 310px;
+    width: 20%;
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 7px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.profile_img .skills .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0 3px;
+}
+
+.profile_img .skills .item .icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2.5px solid #f0eaca;
+    position: relative;
+}
+
+.skills .item .icon .level {
+    position: absolute;
+    font-size: 12px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    color: #000000;
+    background: #ffff;
+    width: 20px;
+    text-align: center;
+    box-shadow: 0 0 5px 0 #000;
+    border-radius: 4px;
+    font-weight: 900;
+}
+
+.skills .item .icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.skills .item .type {
+    font-size: 70%;
+    margin-top: 10px;
+}
+
+.info-detail-and-logo {
+    width: 43%;
+    height: 90%;
+    margin: 20px 0;
+}
+
+.logo {
+    height: 5rem;
+    bottom: 0;
+    text-align: center;
+    width: 95%;
+    margin-left: 30px;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.info-detail {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 95%;
+}
+
+.info-detail .title {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid #f0eaca;
+}
+
+.info-detail .title .name {
+    --font-size: 2.2rem;
+    font-size: var(--font-size);
+    white-space: nowrap;
+    max-width: calc(var(--font-size) * 4);
+    overflow: hidden;
+}
+
+.info-detail .title .type {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.info-detail .title .type img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.info-detail .title .level {
+    margin-left: 10px;
+    font-size: 1rem;
+    margin-bottom: 3px;
+}
+
+.info-detail .title .const {
+    display: flex;
+    align-items: center;
+    /* margin-left: 10px; */
+    font-size: 1rem;
+    border: 1.5px solid #f0eaca;
+    padding: 0 3px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.title .const img {
+    height: 20px;
+    margin-right: 2px;
+}
+
+.title .const:nth-child(5) {
+    margin-left: 5px !important;
+}
+
+.info-detail .detail-list .item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #f0eaca;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    flex: 1;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.info-detail .detail-list .item .icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    overflow: hidden;
+    position: relative;
+    margin-left: 4px;
+}
+
+.info-detail .detail-list .item .icon img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 120%;
+    display: block;
+}
+
+.info-detail .detail-list .item .text {
+    margin-left: 8px;
+}
+
+.info-detail .detail-list .item .value {
+    margin-left: auto;
+    margin-right: 17px;
+}
+
+.info-detail .detail-list .item .multi-line-sum {
+    /*background: #00ff8c;*/
+    margin-left: auto;
+    text-align: right;
+}
+
+.info-detail .detail-list .item .multi-line {
+    margin-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    text-align: right;
+    width: 50px;
+    background: #4a4a4a87;
+    line-height: 110%;
+}
+
+.info-detail .detail-list .item .multi-line .delta {
+    color: #9be802;
+}
+
+.weapon {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.weapon .icon {
+    width: 30%;
+}
+
+.weapon .info {
+    width: 70%;
+}
+
+.weapon .info .title_weapon {
+    font-size: 15pt;
+    text-align: center;
+}
+
+.weapon .info .star img {
+    width: 200px;
+}
+
+.info_level {
+    display: flex;
+    justify-content: space-around;
+}
+
+.relic_and_misc {
+    width: 44%;
+}
+
+.misc {
+    border: 1px solid #f0eaca;
+    border-radius: 10px;
+    padding: 0px 5px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.misc .info, .profile_user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+
+}
+.relic-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* 遗器列表每项 */
+.relic-list .item {
+    width: calc(33% - 10px);
+    border: 1px solid #f0eaca;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.relic-list .item:nth-child(3n) {
+    margin-right: 0;
+}
+
+/* 遗器信息 */
+.relic-list .item .relic-info {
+    padding: 15px 10px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+}
+
+/* 遗器图标 */
+.relic-list .item .relic-info .icon {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: 5px;
+}
+
+.relic-list .item .relic-info .icon img {
+    height: 100%;
+    display: block;
+}
+
+/* 遗器名称 */
+.relic-list .item .relic-info .relic-info-detail {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.relic-list .item .relic-info .relic-info-detail .name {
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0.9rem;
+}
+
+/* 遗器星级 */
+.relic-list .item .relic-info .relic-info-detail .level-info {
+    width: 100%;
+    margin-top: 2px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.relic-list .item .relic-info .relic-info-detail .level-info .star {
+    width: 50px;
+    height: 1rem;
+    position: relative;
+    overflow: hidden;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.relic-list .item .relic-info .relic-info-detail .level-info .star img {
+    height: 120%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.relic-list .item .relic-info .relic-info-detail .level-info .level {
+    border: 1px solid #f0eaca;
+    padding: 0px 5px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    margin-left: 3px;
+}
+
+/* 遗器属性值 */
+.relic-list .item .relic-info .relic-info-detail .value {
+    margin-top: 2px;
+    font-size: 15px;
+}
+
+/* 遗器属性值列表 */
+.relic-list .item .relic-value-list {
+    flex-grow: 1;
+    /* flex-shrink: 1; */
+    /* background: #f0eaca; */
+}
+
+/* 遗器属性值列表每项 */
+.relic-list .item .relic-value-list .relic-value {
+    padding: 3px 15px;
+    display: flex;
+    align-items: center;
+    /* color: #f0eaca; */
+    font-size: 0.9rem;
+    line-height: 22px;
+}
+
+.relic-list .item .relic-value-list .relic-value:nth-child(2n + 1) {
+    background-color: #5452528f;
+}
+
+.relic-list .item .relic-value-list .relic-value:nth-child(2n) {
+    background-color: #08080957;
+}
+
+/* 遗器属性值列表每项值 */
+.relic-list .item .relic-value-list .relic-value .value {
+    /* font-weight: 600; */
+    margin-left: auto;
+}
+
+.copy_right {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    align-items: flex-end;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.copy_right p {
+    margin-right: 20px;
+}

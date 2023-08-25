@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase HSR</title>
+    <link rel="stylesheet" href="showcase.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="profile_char">
+                <div class="profile_img">
+                    <img src="https://github.mihomo.me/Mar-7th/StarRailRes/master/icon/deco/Rarity5.png" alt=""
+                        class="img-star" id="img-star_char">
+                    <img src="https://github.mihomo.me/Mar-7th/StarRailRes/master/image/character_portrait/1005.png"
+                        alt="" class="img-char">
+                    <div class="skills">
+
+                        <div class="item">
+                            <div class="icon">
+                                <img src="https://github.mihomo.me/Mar-7th/StarRailRes/master/icon/skill/1005_basic_atk.png"
+                                    alt="" id="aa_img">
+                                <div class="level" id="aa_lv"></div>
+                            </div>
+                            <div class="type">AA</div>
+                        </div>
+
+                        <div class="item">
+                            <div class="icon">
+                                <img src="https://github.mihomo.me/Mar-7th/StarRailRes/master/icon/skill/1005_skill.png"
+                                    alt="" id="skill_img">
+                                <div class="level" id="skill_lv"></div>
+                            </div>
+                            <div class="type">Skill</div>
+                        </div>
+
+                        <div class="item">
+                            <div class="icon">
+                                <img src="https://github.mihomo.me/Mar-7th/StarRailRes/master/icon/skill/1005_ultimate.png"
+                                    alt="" id="ultimate_img">
+                                <div class="level" id="ultimate_lv"></div>
+                            </div>
+                            <div class="type">Ultimate</div>
+                        </div>
+
+                        <div class="item">
+                            <div class="icon">
+                                <img src="https://github.mihomo.me/Mar-7th/StarRailRes/master/icon/skill/1005_talent.png"
+                                    alt="" id="talent_img">
+                                <div class="level" id="talent_lv"></div>
+                            </div>
+                            <div class="type">Talent</div>
+                        </div>
+
+                        <div class="item">
+                            <div class="icon">
+                                <img src="https://github.mihomo.me/Mar-7th/StarRailRes/master/icon/skill/1005_technique.png"
+                                    alt="" id="tech_img">
+                                <div class="level" id="tech_lv">1</div>
+                            </div>
+                            <div class="type">Technique</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="info-detail-and-logo">
+                    <div class="info-detail">
+                        <div class="title">
+                            <div class="name" id="char_name"></div>
+                            <div class="type">
+                                <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/element/Lightning.png"
+                                    id="char_element-img">
+                            </div>
+                            <div class="level" id="char_lv"></div>
+                            <div class="const">
+                                <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/path/Nihility.png"
+                                    id="char_path-img">
+                                <span id="char_path-text"></span>
+                            </div>
+                            <div class="const" id="eidolon"></div>
+                        </div>
+
+                        <div class="detail-list">
+
+                            <div class="item">
+                                <div class="icon"><img
+                                        src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/property/IconMaxHP.png"
+                                        alt=""></div>
+                                <div class="text">HP</div>
+
+                                <div class="multi-line-sum" id="hp-sum"></div>
+                                <div class="multi-line">
+                                    <div id="hp-base"></div>
+                                    <div class="delta" id="hp-delta"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="item">
+                                <div class="icon"><img
+                                        src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/property/IconAttack.png"
+                                        alt=""></div>
+                                <div class="text">ATK</div>
+
+                                <div class="multi-line-sum" id="atk-sum"></div>
+                                <div class="multi-line">
+                                    <div id="atk-base"></div>
+                                    <div class="delta" id="atk-delta"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="item">
+                                <div class="icon"><img
+                                        src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/property/IconDefence.png"
+                                        alt=""></div>
+                                <div class="text">DEF</div>
+
+                                <div class="multi-line-sum" id="def_sum"></div>
+                                <div class="multi-line">
+                                    <div id="def_base"></div>
+                                    <div class="delta" id="def_delta"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="item">
+                                <div class="icon"><img
+                                        src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/property/IconSpeed.png"
+                                        alt=""></div>
+                                <div class="text">SPD</div>
+
+                                <div class="multi-line-sum" id="spd-sum"></div>
+                                <div class="multi-line">
+                                    <div id="spd-base"></div>
+                                    <div class="delta" id="spd-delta"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="item">
+                                <div class="icon"><img
+                                        src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/property/IconCriticalChance.png"
+                                        alt=""></div>
+                                <div class="text">CRIT Rate</div>
+
+                                <div class="value" id="cr-value"></div>
+
+                            </div>
+
+                            <div class="item">
+                                <div class="icon"><img
+                                        src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/property/IconCriticalDamage.png"
+                                        alt=""></div>
+                                <div class="text">CRIT DMG</div>
+
+                                <div class="value" id="cd-value"></div>
+
+                            </div>
+
+                            <div class="item">
+                                <div class="icon"><img
+                                        src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/property/IconBreakUp.png"
+                                        alt=""></div>
+                                <div class="text">Break Effect</div>
+
+                                <div class="value" id="be-value"></div>
+
+                            </div>
+
+                            <div class="item">
+                                <div class="icon"><img
+                                        src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/property/IconStatusProbability.png"
+                                        alt=""></div>
+                                <div class="text">Effect Hit Rate</div>
+
+                                <div class="value" id="ehr-value"></div>
+
+                            </div>
+
+                            <div class="item">
+                                <div class="icon"><img
+                                        src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/property/IconStatusResistance.png"
+                                        alt=""></div>
+                                <div class="text">Effect RES</div>
+
+                                <div class="value" id="er-value"></div>
+
+                            </div>
+
+                            <div class="item">
+                                <div class="icon"><img
+                                        src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/property/IconThunderAddedRatio.png"
+                                        alt="" id="edb_icon"></div>
+                                <div class="text" id="edb_text"></div>
+
+                                <div class="value" id="edb_value"></div>
+
+                            </div>
+
+                            <div class="item">
+                                <div class="icon">
+                                    <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/property/IconEnergyRecovery.png"
+                                        alt="">
+                                </div>
+                                <div class="text">Energy Regen Rate</div>
+
+                                <div class="value" id="err-value"></div>
+
+                            </div>
+
+                        </div>
+                        <div class="item weapon">
+                            <div class="icon">
+                                <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/light_cone/23006.png"
+                                    class="img-weapon">
+                            </div>
+                            <div class="info">
+                                <div class="title_weapon">
+                                    <div class="name" id="weapon-name"></div>
+                                    <div class="star">
+                                        <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/deco/Rarity5.png"
+                                            id="weapon-star">
+                                    </div>
+                                    <div class="info_level">
+                                        <div class="level" id="weapon-level"></div>
+                                        <div class="dy">
+                                            <div class="dy-icon" id="weapon-super"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relic_and_misc">
+                <div class="relic-list">
+                    <div class="item">
+                        <div class="relic-info">
+                            <div class="icon">
+                                <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/relic/109_0.png"
+                                    alt="" id="icon-relic[0]">
+                            </div>                            
+                            <div class="relic-info-detail">
+                                <div class="name" id="name-relic[0]"></div>
+                                <div class="level-info">
+                                    <div class="star">
+                                        <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/deco/Rarity5.png"
+                                            alt="" id="star-relic[0]">
+                                    </div>
+                                    <div class="level" id="level-relic[0]"></div>
+                                </div>
+                                <div class="name" id="main-stat-name-relic[0]"></div>
+                                <div class="value" id="main-stat-value-relic[0]"></div>
+                            </div>
+                        </div>
+                        <div class="relic-value-list">
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat1-name-relic[0]"></div>
+                                <div class="value" id="sub-stat1-value-relic[0]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat2-name-relic[0]"></div>
+                                <div class="value" id="sub-stat2-value-relic[0]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat3-name-relic[0]"></div>
+                                <div class="value" id="sub-stat3-value-relic[0]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat4-name-relic[0]"></div>
+                                <div class="value" id="sub-stat4-value-relic[0]"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="relic-info">
+                            <div class="icon">
+                                <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/relic/109_0.png"
+                                    alt="" id="icon-relic[1]">
+                            </div>
+                            <div class="relic-info-detail">
+                                <div class="name" id="name-relic[1]"></div>
+                                <div class="level-info">
+                                    <div class="star">
+                                        <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/deco/Rarity5.png"
+                                            alt="" id="star-relic[1]">
+                                    </div>
+                                    <div class="level" id="level-relic[1]"></div>
+                                </div>
+                                <div class="name" id="main-stat-name-relic[1]"></div>
+                                <div class="value" id="main-stat-value-relic[1]"></div>
+                            </div>
+                        </div>
+                        <div class="relic-value-list">
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat1-name-relic[1]"></div>
+                                <div class="value" id="sub-stat1-value-relic[1]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat2-name-relic[1]"></div>
+                                <div class="value" id="sub-stat2-value-relic[1]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat3-name-relic[1]"></div>
+                                <div class="value" id="sub-stat3-value-relic[1]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat4-name-relic[1]"></div>
+                                <div class="value" id="sub-stat4-value-relic[1]"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="relic-info">
+                            <div class="icon">
+                                <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/relic/109_0.png"
+                                    alt="" id="icon-relic[2]">
+                            </div>
+                            <div class="relic-info-detail">
+                                <div class="name" id="name-relic[2]"></div>
+                                <div class="level-info">
+                                    <div class="star">
+                                        <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/deco/Rarity5.png"
+                                            alt="" id="star-relic[2]">
+                                    </div>
+                                    <div class="level" id="level-relic[2]"></div>
+                                </div>
+                                <div class="name" id="main-stat-name-relic[2]"></div>
+                                <div class="value" id="main-stat-value-relic[2]"></div>
+                            </div>
+                        </div>
+                        <div class="relic-value-list">
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat1-name-relic[2]"></div>
+                                <div class="value" id="sub-stat1-value-relic[2]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat2-name-relic[2]"></div>
+                                <div class="value" id="sub-stat2-value-relic[2]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat3-name-relic[2]"></div>
+                                <div class="value" id="sub-stat3-value-relic[2]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat4-name-relic[2]"></div>
+                                <div class="value" id="sub-stat4-value-relic[2]"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="relic-info">
+                            <div class="icon">
+                                <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/relic/109_0.png"
+                                    alt="" id="icon-relic[3]">
+                            </div>
+                            <div class="relic-info-detail">
+                                <div class="name" id="name-relic[3]"></div>
+                                <div class="level-info">
+                                    <div class="star">
+                                        <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/deco/Rarity5.png"
+                                            alt="" id="star-relic[3]">
+                                    </div>
+                                    <div class="level" id="level-relic[3]"></div>
+                                </div>
+                                <div class="name" id="main-stat-name-relic[3]"></div>
+                                <div class="value" id="main-stat-value-relic[3]"></div>
+                            </div>
+                        </div>
+                        <div class="relic-value-list">
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat1-name-relic[3]"></div>
+                                <div class="value" id="sub-stat1-value-relic[3]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat2-name-relic[3]"></div>
+                                <div class="value" id="sub-stat2-value-relic[3]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat3-name-relic[3]"></div>
+                                <div class="value" id="sub-stat3-value-relic[3]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat4-name-relic[3]"></div>
+                                <div class="value" id="sub-stat4-value-relic[3]"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="relic-info">
+                            <div class="icon">
+                                <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/relic/109_0.png"
+                                    alt="" id="icon-relic[4]">
+                            </div>
+                            <div class="relic-info-detail">
+                                <div class="name" id="name-relic[4]"></div>
+                                <div class="level-info">
+                                    <div class="star">
+                                        <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/deco/Rarity5.png"
+                                            alt="" id="star-relic[4]">
+                                    </div>
+                                    <div class="level" id="level-relic[4]"></div>
+                                </div>
+                                <div class="name" id="main-stat-name-relic[4]"></div>
+                                <div class="value" id="main-stat-value-relic[4]"></div>
+                            </div>
+                        </div>
+                        <div class="relic-value-list">
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat1-name-relic[4]"></div>
+                                <div class="value" id="sub-stat1-value-relic[4]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat2-name-relic[4]"></div>
+                                <div class="value" id="sub-stat2-value-relic[4]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat3-name-relic[4]"></div>
+                                <div class="value" id="sub-stat3-value-relic[4]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat4-name-relic[4]"></div>
+                                <div class="value" id="sub-stat4-value-relic[4]"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="relic-info">
+                            <div class="icon">
+                                <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/relic/109_0.png"
+                                    alt="" id="icon-relic[5]">
+                            </div>
+                            <div class="relic-info-detail">
+                                <div class="name" id="name-relic[5]"></div>
+                                <div class="level-info">
+                                    <div class="star">
+                                        <img src="https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/deco/Rarity5.png"
+                                            alt="" id="star-relic[5]">
+                                    </div>
+                                    <div class="level" id="level-relic[5]"></div>
+                                </div>
+                                <div class="name" id="main-stat-name-relic[5]"></div>
+                                <div class="value" id="main-stat-value-relic[5]"></div>
+                            </div>
+                        </div>
+                        <div class="relic-value-list">
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat1-name-relic[5]"></div>
+                                <div class="value" id="sub-stat1-value-relic[5]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat2-name-relic[5]"></div>
+                                <div class="value" id="sub-stat2-value-relic[5]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat3-name-relic[5]"></div>
+                                <div class="value" id="sub-stat3-value-relic[5]"></div>
+                            </div>
+                            <div class="relic-value">
+                                <div class="name" id="sub-stat4-name-relic[5]"></div>
+                                <div class="value" id="sub-stat4-value-relic[5]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="misc">
+                    <div class="info">
+                        <div class="name">
+                            Relic Evalution: <span class="score"><b>?</b> rank</span>
+                        </div>
+                        <div class="total-score">Total Score: Not Yet Available</div>
+                        <div class="uid"></div>
+                    </div>
+                    <div class="profile_user">
+                        <div class="nickname"></div>
+                        <div class="trail_level"></div>
+                        <div class="world_level"></div>
+                    </div>
+                </div>
+                <div class="copy_right">
+                    <p>
+                        Created By <b>Pom-Pom Discord Bot (Kazdel Team)</b> <br>
+                        This site is not affiliated with miHoYo & all game content and assets are trademarks and
+                        copyrights
+                        of miHoYo. <br>
+                        Powered by <a href="https://march7th.xiaohei.moe/zh/resource/mihomo_api.html"
+                            style="color: #fff;">Mihomo.me</a>
+                    </p>
+                    <a href="https://discord.gg/kazdelteamakvn"><img src="./img/logo_kazdel_1.png" alt=""
+                            width="100"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="showcase.js"></script>
+</body>
+
+</html>
