@@ -70,8 +70,8 @@ body {
 
 .wrapper .container .profile_char .profile_img .skills {
     position: absolute;
-    bottom: 310px;
-    width: 20%;
+    bottom: 40px;
+    width: 25%;
     backdrop-filter: blur(4.5px);
     -webkit-backdrop-filter: blur(4.5px);
     display: flex;
